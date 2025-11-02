@@ -1,11 +1,378 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>My First GitHub Page</title>
-  </head>
-  <body>
-    <h1>Hello GitHub Pages!</h1>
-    <p>GitHub Pagesのテスト公開ページです。</p>
-  </body>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>福来郎の命名書 | 出産祝いに贈るオーダーメイド命名書</title>
+  <meta name="description" content="福来郎の命名書は、家族の祈りを一枚の書に仕立てるオーダーメイド作品。出産祝い・赤ちゃんの命名記念に、和紙と水彩が織りなす上質な贈り物を全国へお届けします。">
+  <meta name="keywords" content="命名書,出産祝い,子供,赤ちゃん">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="福来郎の命名書">
+  <meta property="og:description" content="家族の祈りを宿す命名書を受注制作。和紙と水彩のレイヤーで、世界に一つの贈り物をお届けします。">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:image" content="https://placehold.jp/1200x630.png">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://example.com/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;600&family=Shippori+Mincho+B1:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "福来郎",
+        "url": "https://example.com/",
+        "logo": "https://placehold.jp/200x80.png",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "email": "hello@example.com",
+            "areaServed": "JP"
+          }
+        ]
+      },
+      {
+        "@type": "Product",
+        "name": "福来郎 命名書",
+        "image": [
+          "https://placehold.jp/800x600.png",
+          "https://placehold.jp/780x520.png"
+        ],
+        "description": "家族の祈りを込めたオーダーメイド命名書。和紙と水彩のテクスチャで仕立てる贈り物です。",
+        "brand": {
+          "@type": "Brand",
+          "name": "福来郎"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "JPY",
+          "lowPrice": "15000",
+          "highPrice": "38000",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Codex Handoff: 継続セッション用メモ
+       - images/ 配下に実素材を格納済み。参照時は同名ファイルを差し替えるだけでOK。
+       - IntersectionObserverで[data-animate]を制御。新規セクション追加時は同属性を付与すればフェード演出が継承されます。
+       - 参考: JS無効時も情報が読めるよう、display:noneは使用せず初期状態で表示させること。
+       TODO: 次のステップ
+       - ギャラリーにインタラクティブなレイヤー切替（ライトボックス等）を追加
+       - 背景の墨表現をSVGベースのアニメーションに置き換えて質感を向上
+       - CTAセクションにコンバージョン計測用のトラッキングを組み込む
+  -->
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <div class="ink-trace" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="site-header__inner container">
+      <div class="site-header__brand">
+        <a class="site-header__logo" href="#">
+          <span class="site-header__logo-text" aria-label="福来郎">福来郎</span>
+        </a>
+      </div>
+      <button class="site-header__menu-button" type="button" aria-expanded="false" aria-controls="site-navigation" data-menu-toggle>
+        メニュー
+      </button>
+      <nav class="site-header__nav" id="site-navigation" aria-label="主要メニュー" data-site-nav>
+        <ul class="site-header__nav-list">
+          <li class="site-header__nav-item"><a class="site-header__nav-link" href="#concept">コンセプト</a></li>
+          <li class="site-header__nav-item"><a class="site-header__nav-link" href="#lineup">命名書ラインナップ</a></li>
+          <li class="site-header__nav-item"><a class="site-header__nav-link" href="#gallery">作品例</a></li>
+          <li class="site-header__nav-item"><a class="site-header__nav-link" href="#flow">ご注文の流れ</a></li>
+          <li class="site-header__nav-item"><a class="site-header__nav-link" href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__background" aria-hidden="true">
+        <!-- 実画像に差し替える際は下記srcを更新 -->
+        <img src="images/umi_back.PNG" alt="" width="1600" height="1000" loading="eager" decoding="async" onerror="this.onerror=null;this.src='https://placehold.jp/1600x1000.png';">
+      </div>
+      <div class="hero__overlay" aria-hidden="true">
+        <img class="hero__overlay-logo" src="images/fukurou_back.png" alt="福来郎ロゴ" width="720" height="1080" loading="eager" decoding="async" onerror="this.onerror=null;this.style.display='none';">
+      </div>
+      <div class="hero__inner container">
+        <div class="hero__content" data-animate="fade">
+          <p class="hero__eyebrow">命名書専門</p>
+          <h1 class="hero__title" id="hero-title">静かな光を表装する<br>福来郎の命名書</h1>
+          <p class="hero__lead">水面を渡る光のように、赤ちゃんの名前に込めた想いをそっと照らす一枚を。</p>
+          <p class="hero__description">書家の手仕事と水彩のレイヤーで仕立てるオーダーメイド命名書。妊娠期の準備にも、出産祝いにもふさわしい上質な贈り物を全国へお届けします。</p>
+          <div class="hero__cta-group">
+            <a class="button button--primary" href="#lineup">命名書ラインナップを見る</a>
+            <a class="button button--ghost" href="#flow">制作のご相談はこちら</a>
+          </div>
+        </div>
+      </div>
+      <a class="hero__scroll" href="#concept" aria-label="コンセプトへスクロール">Scroll</a>
+    </section>
+
+    <section class="concept section" id="concept" aria-labelledby="concept-title">
+      <div class="section__inner container">
+        <div class="section__header" data-animate="fade">
+          <h2 class="section__title" id="concept-title">一枚の書に宿る、家族の祈り</h2>
+        </div>
+        <div class="concept__body" data-animate="fade">
+          <figure class="concept__visual">
+            <img src="images/concept.jpeg" alt="柔らかな布の上に飾られた命名書" width="960" height="640" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.jp/960x640.png';">
+          </figure>
+          <div class="concept__text">
+            <p>「福来郎」は、夜を見通す梟のように静かな力で幸せを呼び込みます。書と水彩のレイヤーが、命名の儀式を現代の暮らしに合わせてしつらえます。由来や願いを丁寧にヒアリングし、世界に一つの命名書をご提案します。</p>
+            <blockquote class="concept__quote">静謐な余白に、家族のことばをそっと預ける。</blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lineup section" id="lineup" aria-labelledby="lineup-title">
+      <div class="section__inner container">
+        <div class="section__header" data-animate="fade">
+          <h2 class="section__title" id="lineup-title">命名書ラインナップ</h2>
+          <p class="section__subtitle">キャンバスとアクリルの2シリーズ。命名の由来や出生情報、英字サブコピーも上品にレイアウトします。</p>
+        </div>
+        <div class="lineup__grid">
+          <article class="lineup-card lineup-card--basic" data-animate="lift">
+            <img src="images/lin.jpeg" alt="淡いブルートーンの布の上に置かれた15センチ角の命名書キャンバス" width="640" height="480" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.jp/640x480.png';">
+            <div class="lineup-card__content">
+              <h3 class="lineup-card__title">キャンバス命名書</h3>
+              <p class="lineup-card__description">15cm×15cmのキャンバスに書家が直筆で仕上げるミニマルな一枚。飾る場所を選ばず、ニューボーンフォトの小物にも。</p>
+              <ul class="lineup-card__list">
+                <li>金のアクセントと細やかな手仕事で立体感を演出</li>
+                <li>出生情報や読み仮名をバランスよく配置</li>
+                <li>スタンド・ギフトラッピング対応</li>
+              </ul>
+            </div>
+          </article>
+          <article class="lineup-card lineup-card--premium" data-animate="lift">
+            <img src="images/hukurou.PNG" alt="透明感のあるアクリル板にプリントされた命名書" width="640" height="480" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.jp/640x480.png';">
+            <div class="lineup-card__content">
+              <h3 class="lineup-card__title">アクリル命名書</h3>
+              <p class="lineup-card__description">透明感のあるA4アクリル板にプリントする上質なモデル。浮遊感のある演出で、リビングや玄関の主役に。</p>
+              <ul class="lineup-card__list">
+                <li>UVプリントで長期保存でも色褪せにくい</li>
+                <li>吊り下げ・立てかけ双方の展示に対応</li>
+                <li>ギフトボックスとメッセージカード付き</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery section" id="gallery" aria-labelledby="gallery-title">
+      <div class="section__inner container">
+        <div class="section__header" data-animate="fade">
+          <h2 class="section__title" id="gallery-title">大切な瞬間を形にした作品例</h2>
+          <p class="section__subtitle">色合い、フォント、モチーフはご要望に合わせて調整できます。</p>
+        </div>
+        <div class="gallery__canvas" data-animate="lift">
+          <figure class="gallery__piece gallery__piece--a">
+            <img src="images/lin_up.jpeg" alt="木製シェルフに飾られた命名書「凛」のキャンバス作品" width="360" height="480" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.jp/360x480.png';">
+            <figcaption>凛とした余白と木のテクスチャで上質に飾る</figcaption>
+          </figure>
+          <figure class="gallery__piece gallery__piece--b">
+            <img src="images/tumugi.jpeg" alt="綿花とドライフラワーに囲まれた命名書キャンバス『紬』" width="360" height="360" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.jp/360x360.png';">
+            <figcaption>柔らかなコットンと金の実で祝う『紬』</figcaption>
+          </figure>
+          <figure class="gallery__piece gallery__piece--c">
+            <img src="images/minato.jpeg" alt="淡いブルーの背景で仕立てた命名書『湊』のキャンバス作品" width="360" height="420" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.jp/360x420.png';">
+            <figcaption>水の気配を纏う『湊』の波紋グラデーション</figcaption>
+          </figure>
+          <figure class="gallery__piece gallery__piece--d">
+            <img src="images/ema.jpeg" alt="花とともに撮影された命名書『笑舞』のカード作品" width="360" height="420" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.jp/360x420.png';">
+            <figcaption>カードタイプに舞う筆致『笑舞』</figcaption>
+          </figure>
+          <figure class="gallery__piece gallery__piece--e">
+            <img src="images/fui.jpeg" alt="水彩グラデーションと金のアクセントを添えた命名書『芙』" width="360" height="420" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.jp/360x420.png';">
+            <figcaption>淡い虹色を差し込んだ『芙』の表現</figcaption>
+          </figure>
+          <figure class="gallery__piece gallery__piece--f">
+            <img src="images/hukurou.PNG" alt="透明なアクリルにプリントされた命名書のディテール" width="360" height="420" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.jp/360x420.png';">
+            <figcaption>アクリルに透ける筆跡と余白のコントラスト</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="features section" id="craft" aria-labelledby="features-title">
+      <div class="section__inner container">
+        <div class="section__header" data-animate="fade">
+          <h2 class="section__title" id="features-title">福来郎のこだわり</h2>
+        </div>
+        <div class="features__grid">
+          <article class="features-card" data-animate="lift">
+            <h3 class="features-card__title">想いを映すヒアリング</h3>
+            <p class="features-card__description">お名前の由来やご家族のストーリーを丁寧に伺い、筆致・配色・レイアウトへと結晶化します。</p>
+          </article>
+          <article class="features-card" data-animate="lift">
+            <h3 class="features-card__title">暮らしに馴染む造形</h3>
+            <p class="features-card__description">お子さまの成長とともに長く飾れるよう、落ち着いたトーンと余白設計で洗練を追求します。</p>
+          </article>
+          <article class="features-card" data-animate="lift">
+            <h3 class="features-card__title">唯一無二の存在感</h3>
+            <p class="features-card__description">額装だけでなく空間演出まで見据え、インテリアピースのように佇む命名書をお届けします。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="flow section" id="flow" aria-labelledby="flow-title">
+      <div class="section__inner container">
+        <div class="section__header" data-animate="fade">
+          <h2 class="section__title" id="flow-title">ご注文の流れ</h2>
+          <p class="section__subtitle">出産日までにお届け希望の方は2週間前までにご連絡ください。</p>
+        </div>
+        <div class="flow__layout">
+          <ol class="flow__steps" data-animate="lift">
+            <li class="flow__step">
+              <span class="flow__step-number">1</span>
+              <div>
+                <h3 class="flow__step-title">ヒアリング</h3>
+                <p class="flow__step-text">メルカリまたはInstagramのDMから「お名前・読み・由来・ご希望イメージ」をお知らせください。</p>
+              </div>
+            </li>
+            <li class="flow__step">
+              <span class="flow__step-number">2</span>
+              <div>
+                <h3 class="flow__step-title">下書き確認</h3>
+                <p class="flow__step-text">制作にはおおよそ1週間のお時間をいただきます。進捗に合わせて途中経過を共有いたします。</p>
+              </div>
+            </li>
+            <li class="flow__step">
+              <span class="flow__step-number">3</span>
+              <div>
+                <h3 class="flow__step-title">清書・額装</h3>
+                <p class="flow__step-text">手書きとデジタル補正を経て額装まで丁寧に仕上げます。</p>
+              </div>
+            </li>
+            <li class="flow__step">
+              <span class="flow__step-number">4</span>
+              <div>
+                <h3 class="flow__step-title">発送</h3>
+                <p class="flow__step-text">メルカリ経由のご注文は匿名発送でお届けします。その他の配送方法もご希望に合わせてご案内します。</p>
+              </div>
+            </li>
+          </ol>
+          <aside class="flow__actions" data-animate="lift">
+            <a class="button button--primary flow__action-button" href="https://jp.mercari.com/user/profile/701441507" target="_blank" rel="noopener noreferrer">メルカリショップで購入する</a>
+            <a class="button button--ghost flow__action-button" href="https://www.instagram.com/fukurou.29r/" target="_blank" rel="noopener noreferrer">Instagramで相談する</a>
+            <p class="flow__note">納期やオプションについてはInstagramのDM、またはメルカリのメッセージからお気軽にお問い合わせください。</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials section" id="voices" aria-labelledby="testimonials-title">
+      <div class="section__inner container">
+        <div class="section__header" data-animate="fade">
+          <h2 class="section__title" id="testimonials-title">先輩ママの声</h2>
+        </div>
+        <div class="testimonials__grid" data-animate="lift">
+          <article class="testimonial-card">
+            <p class="testimonial-card__quote">「とっても素敵な命名書で満足です。取引中も丁寧に対応いただきありがとうございました！」</p>
+          </article>
+          <article class="testimonial-card">
+            <p class="testimonial-card__quote">「子の誕生にあったらいいなとお願いしましたが、一生大切にしたい宝物になりました！梱包も丁寧で、開封の瞬間から夫婦で感動していました。周りにもおすすめしたいです。」</p>
+          </article>
+          <article class="testimonial-card">
+            <p class="testimonial-card__quote">「商品届きました！とっても素敵な作品をありがとうございました(^^) また、機会があればよろしくお願いします！」</p>
+          </article>
+          <article class="testimonial-card">
+            <p class="testimonial-card__quote">「この名前にしてよかったな、と改めて感じさせてくれる命名書になりました。書はエネルギーに溢れていますし、背景のあしらいは繊細な色使いでとても上品。発送連絡や梱包もていねいで、お願いしてよかったです。」</p>
+            <p class="testimonial-card__meta">2024/02</p>
+          </article>
+          <article class="testimonial-card">
+            <p class="testimonial-card__quote">「センスのいいカラーリングに書体も好みでとっても素敵で気に入っています。長女の分も揃えてオーダーしたいと思っています。ありがとうございました。」</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq section" id="faq" aria-labelledby="faq-title">
+      <div class="section__inner container">
+        <div class="section__header" data-animate="fade">
+          <h2 class="section__title" id="faq-title">よくあるご質問</h2>
+        </div>
+        <div class="faq__list" data-animate="lift">
+          <article class="faq__item">
+            <h3 class="faq__question">
+              <button class="faq__question-button" type="button" aria-expanded="false" aria-controls="faq-answer-1">いつまでに申し込めば出産祝いに間に合いますか？</button>
+            </h3>
+            <div class="faq__answer" id="faq-answer-1">
+              <p>通常ご注文から10日で発送いたします。お急ぎの場合は事前にご相談ください。</p>
+            </div>
+          </article>
+          <article class="faq__item">
+            <h3 class="faq__question">
+              <button class="faq__question-button" type="button" aria-expanded="false" aria-controls="faq-answer-2">二人目用の命名書もお願いできますか？</button>
+            </h3>
+            <div class="faq__answer" id="faq-answer-2">
+              <p>ご兄弟のバランスを考えてデザイン調整いたします。先に制作した命名書のお写真を共有ください。</p>
+            </div>
+          </article>
+          <article class="faq__item">
+            <h3 class="faq__question">
+              <button class="faq__question-button" type="button" aria-expanded="false" aria-controls="faq-answer-3">文字の色や英字を追加できますか？</button>
+            </h3>
+            <div class="faq__answer" id="faq-answer-3">
+              <p>可能です。色味のカラーチップや参考写真をお送りいただければ、イメージに合わせてご提案します。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner container" data-animate="lift">
+      <div class="site-footer__cta">
+        <h2 class="site-footer__title">命名書ラインナップを見る</h2>
+        <a class="button button--primary site-footer__cta-button" href="#lineup">ラインナップへ</a>
+      </div>
+      <div class="site-footer__links">
+        <div class="site-footer__column">
+          <h3 class="site-footer__heading">ご案内</h3>
+          <ul class="site-footer__list">
+            <li><a href="#concept">コンセプト</a></li>
+            <li><a href="#lineup">命名書ラインナップ</a></li>
+            <li><a href="#flow">ご注文の流れ</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__column">
+          <h3 class="site-footer__heading">SNS</h3>
+          <ul class="site-footer__list">
+            <li><a href="https://www.instagram.com/fukurou.29r/" target="_blank" rel="noopener noreferrer">@fukurou.29r</a></li>
+            <li><a href="https://jp.mercari.com/user/profile/701441507" target="_blank" rel="noopener noreferrer">Mercariショップ</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__column">
+          <h3 class="site-footer__heading">お問い合わせ</h3>
+          <p class="site-footer__text">InstagramのDM、またはメルカリ取引メッセージにて承ります。</p>
+          <p class="site-footer__text"><a href="#">特定商取引法に基づく表示（準備中）</a></p>
+          <p class="site-footer__text"><a href="#">プライバシーポリシー（準備中）</a></p>
+        </div>
+      </div>
+      <p class="site-footer__copyright">© 福来郎</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+  <!-- Dev Log 2025-05-02:
+       - ヒーローの余白とフォントサイズを見直し、ロゴとコピーの重なりを解消。
+       - 作品例セクションをグリッドベースに再構築し、PC/SPの見え方を統一。
+       - 背景インクアニメを調整しつつ、ご注文フローとレビュー文面を更新。
+       次回やること: 背景アニメの質感をSVG化／ギャラリーのインタラクション追加／CTA計測対応 -->
+</body>
 </html>
