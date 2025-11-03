@@ -909,8 +909,8 @@ body.has-js .testimonials__grid > [data-animate]:nth-child(3) {
 
   .hero__overlay-logo {
     width: clamp(220px, 60vw, 340px);
-    max-height: 46vh;
-    opacity: 0.88;
+    max-height: 52vh;
+    opacity: 0.92;
   }
 
   .hero__scroll {
